@@ -1,9 +1,6 @@
 'use client';
 
-import { useAuth } from '../app/context/AuthContext';
 import CustomerCard from '@/components/CustomerCard';
-import LoginForm from '@/components/LoginForm';
-import { usePathname, useRouter } from "next/navigation";
 
 export default function CustomerList({ customers }: { customers: any[] }) {
 

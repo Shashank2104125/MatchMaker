@@ -17,7 +17,7 @@ export default function LoginForm() {
       console.log('Login successful');
       router.push('/'); // ✅ change to your actual page
     } catch (error) {
-      console.error('Login error:', error.message);
+      console.error('Login error:', (error as Error).message);
       alert('Login failed: Invalid credentials');
     }
   };
@@ -51,9 +51,8 @@ export default function LoginForm() {
       <button
         type="button"
         onClick={handleGoToSignup}
-        className="w-full bg-red-400 text-white p-2 rounded hover:bg-red-600"
-      >
-        Don't have an account?
+        className="w-full bg-red-400 text-white p-2 rounded hover:bg-red-600">
+        Do not have an account?
       </button>
     </form>
   );

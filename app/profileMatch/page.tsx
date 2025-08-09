@@ -7,13 +7,13 @@ import { db, auth } from "../../firebase"; // adjust path to your firebase confi
 import { getFemaleRecommendation } from '../actions/query-female-index';
 import { getMaleRecommendation } from '../actions/query-male-index';
 import CustomerList from '@/components/CustomerList';
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useAuth } from "../../app/context/AuthContext";
 
 
 export default function ProfileMatch() {
     const [currentUserProfile, setCurrentUserProfile] = useState({});
-    const [recommendedProfile,setRecommendedProfile] = useState([]);
+    const [recommendedProfile, setRecommendedProfile] = useState<any[]>([]);
     const [userGender, setUserGender] = useState<string | null>(null);
 
     const router = useRouter();

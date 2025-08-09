@@ -20,7 +20,7 @@ const SignUpForm = () => {
       router.push('/login')
       // Optional: update profile or store name in Firestore
     } catch (error) {
-      console.error("Signup error:", error.message);
+      console.error("Signup error:", (error as Error).message);
     }
   };
 

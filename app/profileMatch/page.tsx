@@ -13,7 +13,7 @@ import { useAuth } from "../../app/context/AuthContext";
 
 export default function ProfileMatch() {
     const [currentUserProfile, setCurrentUserProfile] = useState({});
-    const [recommendedProfile,setRecommendedProfile] = useState([]);
+    const [recommendedProfile, setRecommendedProfile] = useState<any[]>([]);
     const [userGender, setUserGender] = useState<string | null>(null);
 
     const router = useRouter();

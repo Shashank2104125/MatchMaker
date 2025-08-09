@@ -16,9 +16,37 @@ import { useAuth } from "../app/context/AuthContext";
 
 
 export default function HomePage() {
-  const [customers, setCustomers] = useState([]);
-  const [maleCustomers, setMaleCustomers] = useState([]);
-  const [femaleCustomers, setFemaleCustomers] = useState([]);
+
+  type Customer = {
+      id: string;
+      firstName: string;
+      lastName: string;
+      gender: string;
+      dateOfBirth: string;
+      country: string;
+      city: string;
+      height: number;
+      email: string;
+      phoneNumber: string;
+      undergraduateCollege: string;
+      degree: string;
+      income: number;
+      currentCompany: string;
+      designation: string;
+      maritalStatus: string;
+      languagesKnown: string[];
+      siblings: string;
+      caste: string;
+      religion: string;
+      wantKids: string;
+      openToRelocate: string;
+      openToPets: string;
+      statusTag: string;
+    };
+
+  const [customers, setCustomers] = useState<Customer[]>([]);
+  const [maleCustomers, setMaleCustomers] = useState<Customer[]>([]);
+  const [femaleCustomers, setFemaleCustomers] =useState<Customer[]>([]);
   const [userGender, setUserGender] = useState<string | null>(null);
 
   const router = useRouter();
